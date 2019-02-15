@@ -5,11 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.tonialcaide</groupId>
-    <artifactId>jee</artifactId>
+    <artifactId>tomata</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
-
-    <name>jee</name>
 
     <properties>
         <maven.compiler.source>10</maven.compiler.source>
@@ -34,6 +32,7 @@
     </dependencies>
 
     <build>
+        <finalName>tomata</finalName>
         <plugins>
             <plugin>
                 <groupId>org.wildfly.plugins</groupId>
