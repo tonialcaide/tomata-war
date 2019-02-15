@@ -7,6 +7,40 @@
     <groupId>com.github.tonialcaide</groupId>
     <artifactId>jee</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
 
+    <name>jee</name>
+
+    <properties>
+        <maven.compiler.source>10</maven.compiler.source>
+        <maven.compiler.target>1.10</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!--REST-->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <!--JEE-->
+        <dependency>
+            <groupId>org.wildfly.bom</groupId>
+            <artifactId>wildfly</artifactId>
+            <scope>runtime</scope>
+            <type>pom</type>
+            <version>12.0.0.Final</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.2.2.Final</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
